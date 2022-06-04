@@ -49,14 +49,14 @@ export const main = async () => {
         levelId: `custom_level_${leaderboard.songHash.toUpperCase()}`,
         maxCombo: score.maxCombo,
         maxRank: leaderboard.maxScore
-          ? getRankName((score.baseScore / leaderboard.maxScore) * 100)
+          ? getRankName((score.modifiedScore / leaderboard.maxScore) * 100)
           : 0,
       });
     data.localPlayers[0].levelsStatsData[index].fullCombo = score.fullCombo;
     data.localPlayers[0].levelsStatsData[index].maxCombo = score.maxCombo;
     data.localPlayers[0].levelsStatsData[index].highScore = score.modifiedScore;
     data.localPlayers[0].levelsStatsData[index].maxRank = leaderboard.maxScore
-      ? getRankName((score.baseScore / leaderboard.maxScore) * 100)
+      ? getRankName((score.modifiedScore / leaderboard.maxScore) * 100)
       : 0;
     data.localPlayers[0].levelsStatsData[index].validScore = true;
   };
