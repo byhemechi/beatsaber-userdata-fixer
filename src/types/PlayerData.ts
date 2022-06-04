@@ -1,0 +1,187 @@
+export type PlayerData = {
+  version: string;
+  localPlayers: {
+    playerId: string;
+    playerName: string;
+    shouldShowTutorialPrompt: boolean;
+    shouldShow360Warning: boolean;
+    agreedToEula: boolean;
+    didSelectLanguage: boolean;
+    agreedToMultiplayerDisclaimer: boolean;
+    avatarCreated: boolean;
+    playerAgreements: {
+      eulaVersion: number;
+      privacyPolicyVersion: number;
+      healthAndSafetyVersion: number;
+    };
+    lastSelectedBeatmapDifficulty: number;
+    lastSelectedBeatmapCharacteristicName: string;
+    gameplayModifiers: {
+      energyType: number;
+      instaFail: boolean;
+      failOnSaberClash: boolean;
+      enabledObstacleType: number;
+      fastNotes: boolean;
+      strictAngles: boolean;
+      disappearingArrows: boolean;
+      ghostNotes: boolean;
+      noBombs: boolean;
+      songSpeed: number;
+      noArrows: boolean;
+      noFailOn0Energy: boolean;
+      proMode: boolean;
+      zenMode: boolean;
+      smallCubes: boolean;
+    };
+    playerSpecificSettings: {
+      staticLights: boolean;
+      leftHanded: boolean;
+      playerHeight: number;
+      automaticPlayerHeight: boolean;
+      sfxVolume: number;
+      reduceDebris: boolean;
+      noTextsAndHuds: boolean;
+      advancedHud: boolean;
+      saberTrailIntensity: number;
+      _noteJumpDurationTypeSettingsSaveData: number;
+      noteJumpFixedDuration: number;
+      autoRestart: boolean;
+      noFailEffects: boolean;
+      noteJumpBeatOffset: number;
+      hideNoteSpawnEffect: boolean;
+      adaptiveSfx: boolean;
+      environmentEffectsFilterDefaultPreset: number;
+      environmentEffectsFilterExpertPlusPreset: number;
+    };
+    practiceSettings: {
+      startSongTime: number;
+      songSpeedMul: number;
+    };
+    playerAllOverallStatsData: {
+      campaignOverallStatsData: {
+        goodCutsCount: number;
+        badCutsCount: number;
+        missedCutsCount: number;
+        totalScore: number;
+        playedLevelsCount: number;
+        cleardLevelsCount: number;
+        failedLevelsCount: number;
+        fullComboCount: number;
+        timePlayed: number;
+        handDistanceTravelled: number;
+        cummulativeCutScoreWithoutMultiplier: number;
+      };
+      soloFreePlayOverallStatsData: {
+        goodCutsCount: number;
+        badCutsCount: number;
+        missedCutsCount: number;
+        totalScore: number;
+        playedLevelsCount: number;
+        cleardLevelsCount: number;
+        failedLevelsCount: number;
+        fullComboCount: number;
+        timePlayed: number;
+        handDistanceTravelled: number;
+        cummulativeCutScoreWithoutMultiplier: number;
+      };
+      partyFreePlayOverallStatsData: {
+        goodCutsCount: number;
+        badCutsCount: number;
+        missedCutsCount: number;
+        totalScore: number;
+        playedLevelsCount: number;
+        cleardLevelsCount: number;
+        failedLevelsCount: number;
+        fullComboCount: number;
+        timePlayed: number;
+        handDistanceTravelled: number;
+        cummulativeCutScoreWithoutMultiplier: number;
+      };
+      onlinePlayOverallStatsData: {
+        goodCutsCount: number;
+        badCutsCount: number;
+        missedCutsCount: number;
+        totalScore: number;
+        playedLevelsCount: number;
+        cleardLevelsCount: number;
+        failedLevelsCount: number;
+        fullComboCount: number;
+        timePlayed: number;
+        handDistanceTravelled: number;
+        cummulativeCutScoreWithoutMultiplier: number;
+      };
+    };
+    levelsStatsData: {
+      levelId: string;
+      difficulty: number;
+      beatmapCharacteristicName: string;
+      highScore: number;
+      maxCombo: number;
+      fullCombo: boolean;
+      maxRank: number;
+      validScore: boolean;
+      playCount: number;
+    }[];
+    missionsStatsData: {
+      missionId: string;
+      cleared: boolean;
+    }[];
+    showedMissionHelpIds: string[];
+    colorSchemesSettings: {
+      overrideDefaultColors: boolean;
+      selectedColorSchemeId: string;
+      colorSchemes: {
+        colorSchemeId: string;
+        saberAColor: {
+          r: number;
+          g: number;
+          b: number;
+          a: number;
+        };
+        saberBColor: {
+          r: number;
+          g: number;
+          b: number;
+          a: number;
+        };
+        environmentColor0: {
+          r: number;
+          g: number;
+          b: number;
+          a: number;
+        };
+        environmentColor1: {
+          r: number;
+          g: number;
+          b: number;
+          a: number;
+        };
+        obstaclesColor: {
+          r: number;
+          g: number;
+          b: number;
+          a: number;
+        };
+      }[];
+    };
+    overrideEnvironmentSettings: {
+      overrideEnvironments: boolean;
+      overrideNormalEnvironmentName: string;
+      override360EnvironmentName: string;
+    };
+    favoritesLevelIds: string[];
+    multiplayerModeSettings: {
+      createServerNumberOfPlayers: number;
+      quickPlayDifficulty: string;
+      // @ts-ignore autogenerated
+      quickPlaySongPackMask: any[];
+      quickPlaySongPackMaskSerializedName: string;
+      quickPlayEnableLevelSelection: boolean;
+    };
+    currentDlcPromoDisplayCount: number;
+    currentDlcPromoId: string;
+  }[];
+  guestPlayers: {
+    playerName: string;
+  }[];
+};
